@@ -50,6 +50,7 @@ export class launch extends Component {
                   <br></br>
                   <h4>Final Report</h4>
                     <li className="list-group-item">Details: {details}</li>
+                    <li className="list-group-item">Launch Successful:  <span className={classNames({'text-success' : launch_success, 'text-danger': !launch_success})}>{launch_success ? 'Yes' : 'No'}</span></li>
                   </ul>
               </div>;
             }
