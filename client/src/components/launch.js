@@ -17,8 +17,8 @@ const LAUNCH_QUERY = gql`
         rocket_id
         rocket_name
         rocket_type
-      }
-    }
+      } 
+    } 
   }
 `;
 
@@ -31,7 +31,7 @@ export class launch extends Component {
         <Query query={LAUNCH_QUERY} variables={{flight_number}}>
           {
             ({loading, error, data}) => {
-              if (loading) return <h4>Loading...</h4>;
+              if (loading) return <div className="loader"></div>;
               if (error) console.log(error);
 
               const { mission_name, flight_number, launch_year, launch_success, details, rocket: {rocket_id, rocket_name, rocket_type}} = data.launch;
